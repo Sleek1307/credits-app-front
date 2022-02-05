@@ -5,7 +5,7 @@ const SolicitudesCreditos = (props) => {
     <>
       <h1 className="text-center">Solicitudes de credito</h1>
 
-      <div className="overflow-auto border p-2" style={{ height: "430px" }}>
+      <div className="overflow-auto p-2" style={{ height: "430px" }}>
         <div className="border rounded-1 px-3">
           <div>
             <div className="row border-bottom">

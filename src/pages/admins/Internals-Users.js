@@ -2,6 +2,10 @@ import React from 'react';
 
 const InternalUsers = () =>{
     return <>
+
+        <h1 className='text-center mt-2'>
+            Usuarios internos
+        </h1>
         <div className='border d-flex justify-content-center'
             style={{
                 height: "500px",

@@ -7,7 +7,7 @@ import {
   ReaderOutline,
 } from "react-ionicons";
 
-const MenuAdmin = () => {
+const MenuInternal = () => {
   return (
     <Fragment>
       <div id="sidebar-container" className="bg-primary p-0 col-lg-3">
@@ -25,7 +25,7 @@ const MenuAdmin = () => {
 
           <div className="ho d-flex align-items-center" style={{height: '55px'}}>
             <Link
-              to="/admin/credits"
+              to="/internal/credits"
               className="w-100 fs-6 pl-3 font-weight d-block text-light border-0"
             >
               <MailOutline
@@ -40,7 +40,7 @@ const MenuAdmin = () => {
 
           <div className="ho d-flex align-items-center" style={{height: '55px'}}>
             <Link
-              to="/admin/prorroga"
+              to="/internal/prorroga"
               className="w-100 fs-6 pl-3 font-weight d-block text-light border-0"
             >
               <MailOutline
@@ -55,7 +55,7 @@ const MenuAdmin = () => {
 
           <div className="ho d-flex align-items-center" style={{height: '55px'}}>
             <Link
-              to="/admin/historypay"
+              to="/internal/historypay"
               className="w-100 fs-6 pl-3 font-weight d-block text-light border-0"
             >
               <ReaderOutline
@@ -70,22 +70,7 @@ const MenuAdmin = () => {
 
           <div className="ho d-flex align-items-center" style={{height: '55px'}}>
             <Link
-              to="/admin/internals"
-              className="w-100 fs-6 pl-3 font-weight d-block text-light border-0"
-            >
-              <PeopleOutline
-                color={"#00000"}
-                height="30px"
-                width="30px"
-                className="p-2"
-              />
-              Usuarios internos
-            </Link>
-          </div>
-
-          <div className="ho d-flex align-items-center" style={{height: '55px'}}>
-            <Link
-              to="/admin/finals"
+              to="/internal/finals"
               className="w-100 fs-6 pl-3 font-weight d-block text-light border-0"
             >
               <PeopleOutline
@@ -100,7 +85,7 @@ const MenuAdmin = () => {
 
           <div className="ho d-flex align-items-center" style={{height: '55px'}}>
             <Link
-              to="/admin/myacount"
+              to="/internal/myacount"
               className="w-100 fs-6 pl-3 font-weight d-block text-light border-0"
             >
               <PersonOutline
@@ -118,4 +103,4 @@ const MenuAdmin = () => {
   );
 };
 
-export default MenuAdmin;
+export default MenuInternal;

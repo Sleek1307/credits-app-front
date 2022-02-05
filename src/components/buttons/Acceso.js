@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Popover, Button, OverlayTrigger } from "react-bootstrap";
 import { useForm } from "react-hook-form";
@@ -23,9 +23,7 @@ const usersType = [
 ];
 
 const Acceso = () => {
-
-  const { signin, user, getUser } = useUsuario();
-  const history = useNavigate();
+  const { signin } = useUsuario();
 
   const {
     register,
@@ -37,15 +35,6 @@ const Acceso = () => {
 
   const onSubmit = async (form) => {
     await signin(form);
-    let info = user.data;
-    console.log(info);
-    if (info.rol == 'admin') {
-      history('/admin/credits');
-    }else if(info.rol == 'int'){
-      history('/internal/credits')
-    }else if(info.rol == 'final'){
-      history('/final')
-    }
   };
 
   return (

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 const PayHistory = () => {
-
   const [pagos, setPagos] = useState([]);
 
   // useEffect(()=>{
@@ -10,8 +9,9 @@ const PayHistory = () => {
 
   return (
     <>
+      <h1 className="mt-2 text-center">Historial de pago</h1>
       <div
-        className="d-flex justify-content-center"
+        className="py-2 d-flex justify-content-center"
         style={{
           height: "500px",
         }}
@@ -35,24 +35,12 @@ const PayHistory = () => {
           <div className="p-1 overflow-auto">
             <table className="table border">
               <thead>
-                <th>
-                  #
-                </th>
-                <th>
-                  Credito N° 
-                </th>
-                <th>
-                  Pago N°
-                </th>
-                <th>
-                  Fecha de pago
-                </th>
-                <th>
-                  Valor pagado
-                </th>
-                <th>
-                  Valor restante
-                </th>
+                <th>#</th>
+                <th>Credito N°</th>
+                <th>Pago N°</th>
+                <th>Fecha de pago</th>
+                <th>Valor pagado</th>
+                <th>Valor restante</th>
               </thead>
               <tbody>
                 {/* {

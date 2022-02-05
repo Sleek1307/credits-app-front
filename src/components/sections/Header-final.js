@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "jquery/dist/jquery.js";
 import LogOut from "./../buttons/Logout";
 import Acceso from "./../buttons/Acceso";
-import { useUsuario } from "../../providers/user.provider";
 import {
   ReaderOutline,
   PersonOutline,
@@ -43,7 +42,7 @@ const BurgerMenu = (props) => {
           <div class="shadow-lg p-4 mt-2 w-100 d-flex justify-content-startn bg-light">
             <div>
               <Link
-                to="/admin/credits"
+                to="/internal/credits"
                 style={{ color: "black" }}
                 className="fs-6 pl-3 pb-4 font-weight d-block border-0"
                 onClick={showToggler}
@@ -58,7 +57,7 @@ const BurgerMenu = (props) => {
               </Link>
 
               <Link
-                to="/admin/prorroga"
+                to="/internal/prorroga"
                 style={{ color: "black" }}
                 className="fs-6 pl-3 pb-4 font-weight d-block border-0"
                 onClick={showToggler}
@@ -73,7 +72,7 @@ const BurgerMenu = (props) => {
               </Link>
 
               <Link
-                to="/admin/historypay"
+                to="/internal/historypay"
                 style={{ color: "black" }}
                 className="fs-6 pl-3 pb-4 font-weight d-block border-0"
                 onClick={showToggler}
@@ -88,7 +87,7 @@ const BurgerMenu = (props) => {
               </Link>
 
               <Link
-                to="/admin/internals"
+                to="/internal/internals"
                 style={{ color: "black" }}
                 className="fs-6 pl-3 pb-4 font-weight d-block border-0"
                 onClick={showToggler}
@@ -103,22 +102,7 @@ const BurgerMenu = (props) => {
               </Link>
 
               <Link
-                to="/admin/finals"
-                style={{ color: "black" }}
-                className="fs-6 pl-3 pb-4 font-weight d-block border-0"
-                onClick={showToggler}
-              >
-                <ReaderOutline
-                  color={"black"}
-                  height="30px"
-                  width="30px"
-                  className="p-2"
-                />
-                Usuarios finales
-              </Link>
-
-              <Link
-                to="/admin/myacount"
+                to="/internal/myacount"
                 style={{ color: "black" }}
                 className="fs-6 pl-3 pb-4 font-weight d-block border-0"
                 onClick={showToggler}
@@ -143,9 +127,6 @@ const BurgerMenu = (props) => {
 };
 
 const Header = (props) => {
-
-  const {user} = useUsuario();
-
   return (
     <>
       <section className="w-100 p-0" style={{ height: "80px" }}>
@@ -171,7 +152,7 @@ const Header = (props) => {
               </div>
             ) : null}
 
-            {user != null ? (
+            {props.img === undefined ? (
               <div
                 id="log-out"
                 className="my-auto col-12 pr-5 d-flex justify-content-end"

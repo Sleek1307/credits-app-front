@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../components/sections/Header";
+import Header from "../components/sections/Header-final";
 import Foot from "../components/sections/Footer";
-import SideBar from "../components/sections/Sidebar-admin";
+import SideBar from "../components/sections/Sidebar-interno";
 import LogOut from "../components/buttons/Logout";
 
-const Dashboard = (props) => {
+const DashboardInt = (props) => {
   return (
     <section className="h-100">
       <div className="row h-100 w-100 m-0">
@@ -20,7 +20,7 @@ const Dashboard = (props) => {
             className="overflow-auto"
             >
             {props.page}
-          </div>
+            </div>
 
           <Foot />
         </div>
@@ -29,4 +29,4 @@ const Dashboard = (props) => {
   );
 };
 
-export default Dashboard;
+export default DashboardInt;

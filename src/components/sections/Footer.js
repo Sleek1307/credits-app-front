@@ -5,7 +5,7 @@ const Foot = () => {
     <>
       <div id="footer" className="position-relative">
         <footer
-          className=" h-100   container-fluid text-primary shadow-lg "
+          className="h-100 container-fluid text-primary shadow-lg "
           style={{ height: "100px" }}
         >
           <div className="d-flex justify-content-center my-3">

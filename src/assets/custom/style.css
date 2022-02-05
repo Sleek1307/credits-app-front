@@ -11,8 +11,9 @@
 }
 
 #main-container{
-    margin: 0px;
-    min-height: calc(100vh - 100px - 100px);
+    height: calc(100vh - 116px - 100px);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .container-content{
